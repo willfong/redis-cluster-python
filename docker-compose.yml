@@ -1,5 +1,12 @@
 version: "3"
 services:
+  python:
+    container_name: python
+    build: python/.
+    volumes: 
+      - "./python:/usr/src/app"
+    tty: true
+  
   redis1:
     container_name: redis1
     build: redis/.
